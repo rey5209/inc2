@@ -1,0 +1,111 @@
+{
+  "jsonData" : [
+    {
+    "banner" : "INCMV_Awards_2022_and_CFO_Vision_2022_cropped.gif",
+    "tittle" : "INCinema | Lingayen, Pangasinan | 2022 ",
+    "subTittle" : "",
+    "subTittleColor" : "red",
+    "subTittleType" : "text",
+    "image" : "INC-Central-Temple-2.jpg",
+    "link" : "https://www.youtube.com", 
+    "different_link_per_data" : false,
+    "different_img_per_data" : true,
+    "redirectPage": true,
+    "page" : "watch2", 
+    "allow_popup_option":true,
+    "popup_option":[  
+      { 
+        "page" : "watch2.html", 
+        "subTittle" : "Youtube",
+        "subTittleIcon" : "youtube",
+        "subTittleColor" : "red",
+        "subTittleType" : "icon",
+        "redirect_text":"Sending view from youtube",
+        "link" : "https://youtu.be/yA5kpXCJgJg?t=1"
+      },
+      { 
+        "page" : "watch.html", 
+        "subTittle" : "Local Views",
+        "subTittleIcon" : "react",
+        "subTittleColor" : "#1892b8",
+        "subTittleType" : "icon",
+        "redirect_text":"Sending view from facebook",
+        "link" : "index.html"
+      }
+
+    ],
+
+    "redirect_text":"Sending view from facebook",
+    "first_header_color":"#fff",
+    "first_header_title":"Local",
+    "viewData" : [
+       
+      {"lokal":"Aguilar",             "duration":"0:30",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Alintaya",          "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Angio",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Away",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Baay Ext",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Bacabac",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Balococ",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Baloling",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0},
+      {"lokal":"Banaybayan Ext",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Bateng",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Binday",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Binmaley",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Bisbisocol",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Bolo",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Bonuan",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Bugalloon",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Calasiao",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Calit",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Calmay",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Carael",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Colisao",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Dagupan City",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"David",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Dumalandan",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Dulag",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Garcia",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Hacienda",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Haway",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Inmalog",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Laguit Centro",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Leet",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Lingayen",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Lobong",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Longos Ext",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Luyan",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Maambal",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Maasin Ext",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Mamalingling",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Manaoag",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Manaoag Dos",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Mangaldan",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Mapandan",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Matalava",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Ninoy",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Palua Ext",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Pangapisan",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Pugaro",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Quetegan",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Rosario",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Salomague",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"San Fabian",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"San Jacinto",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Talibaew Ext",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+      {"lokal":"Tulong",            "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}, 
+
+  
+      
+      {"lokal":" ",         "divider":false , "divider_title":"Top Viewer", "color":"#38e884" , "bg":"#232129"},
+        
+      {"lokal":"",         "duration":"25:0",  "link":"", "image":"22.jpg",        "views":  0}
+      
+      ] 
+    } 
+      
+
+  ]
+}
+
+ 
