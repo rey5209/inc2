@@ -299,7 +299,7 @@ p {
 /* FOR BANNER STYLE */
 .banner-bg{
   
-  background-image: url('../img/E8SJsCJVEAEguXE_bg.jpg'); 
+  background-image: url('../img/CFO_TODAY_INTERTAINMENT.jpg'); 
         background-color: #fff; 
         background-position: center;
         background-repeat: no-repeat;
@@ -375,7 +375,7 @@ p {
 }
 .loader:before, .loader:after{
     content: '';
-    border: 1em solid #F8931D;
+    border: 1em solid #03dbfc;
     border-radius: 50%;
     width: inherit;
     height: inherit;

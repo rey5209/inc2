@@ -25,7 +25,7 @@
       },
       { 
         "page" : "watch.html", 
-        "subTittle" : "Local Views",
+        "subTittle" : "Views",
         "subTittleIcon" : "react",
         "subTittleColor" : "#1892b8",
         "subTittleType" : "icon",
