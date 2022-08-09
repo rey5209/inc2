@@ -30,7 +30,7 @@ $(document).ready(function() {
     .then(function(data) { 
       
       // Local place valiation
-      var gtag = ( data.jsonData[lokal_page_id-1].allow_popup_option ? data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].gtag : data.jsonData[lokal_page_id-1].single_gtag   );
+      var gtag = ( data.jsonData[lokal_page_id-1].allow_popup_option ? data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].gtag_id : data.jsonData[lokal_page_id-1].single_gtag_id   );
 
       var arrLocalData = data.jsonData[lokal_page_id-1].viewData
       var localTitleValidation = localValiation(lokal_name)
@@ -43,8 +43,8 @@ $(document).ready(function() {
       if(localTitleValidation.length == 0)
         document.location='index.html'
       else{ 
-        $('html').append('<script async src="'+gtag+'" type="text/javascript"></script>')
-        document.title = lokal_name; 
+        $('html').append('<script async src="https://www.googletagmanager.com/gtag/js?id='+gtag+'" type="text/javascript"></script>')
+        document.title = lokal_name;  
       }
       
       function localValiation(lokal_name) {

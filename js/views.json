@@ -11,7 +11,9 @@
     "different_link_per_data" : false,
     "different_img_per_data" : true,
     "redirectPage": true,
-    "page" : "watch2", 
+    "page" : "watch2",
+    "single_gtag":"",
+    "single_gtag_id" :"",    
     "allow_popup_option":true,
     "popup_option":[  
       { 
@@ -21,7 +23,9 @@
         "subTittleColor" : "red",
         "subTittleType" : "icon",
         "redirect_text":"Sending view from youtube",
-        "link" : "https://youtu.be/yA5kpXCJgJg?t=1"
+        "link" : "https://youtu.be/yA5kpXCJgJg?t=1",
+        "gtag":"https://www.googletagmanager.com/gtag/js?id=G-TF4V9TTPS1",
+        "gtag_id" :"G-TF4V9TTPS1"  
       },
       { 
         "page" : "watch.html", 
@@ -30,7 +34,9 @@
         "subTittleColor" : "#1892b8",
         "subTittleType" : "icon",
         "redirect_text":"Sending view from facebook",
-        "link" : "index.html"
+        "link" : "index.html",
+        "gtag":"",
+        "gtag_id" :""  
       }
 
     ],
