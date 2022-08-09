@@ -28,6 +28,32 @@ $(document).ready(function() {
       return response.json();
     })
     .then(function(data) { 
+      
+      // Local place valiation
+      var gtag = ( data.jsonData[lokal_page_id-1].allow_popup_option ? data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].gtag : data.jsonData[lokal_page_id-1].single_gtag   );
+
+      var arrLocalData = data.jsonData[lokal_page_id-1].viewData
+      var localTitleValidation = localValiation(lokal_name)
+
+
+      
+      // var gtag ="https://www.googletagmanager.com/gtag/js?id=G-0BQ9DP4YT3"
+      // console.log(localTitleValidation)
+
+      if(localTitleValidation.length == 0)
+        document.location='index.html'
+      else{ 
+        $('html').append('<script async src="'+gtag+'" type="text/javascript"></script>')
+        document.title = lokal_name; 
+      }
+      
+      function localValiation(lokal_name) {
+        return arrLocalData.filter(
+            function(arrLocalData){ return arrLocalData.lokal == lokal_name }
+        );
+      }
+
+      // End of validation
 
       // (data.allow_popup_option? data. )
       
