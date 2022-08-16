@@ -375,7 +375,7 @@ p {
 }
 .loader:before, .loader:after{
     content: '';
-    border: 1em solid #03dbfc;
+    border: 1em solid #adb0b1;
     border-radius: 50%;
     width: inherit;
     height: inherit;
