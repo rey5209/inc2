@@ -7,6 +7,7 @@
     "subTittleColor" : "red",
     "subTittleType" : "text",
     "image" : "INC-Central-Temple-2.jpg",
+    "embed_link" : false, 
     "link" : "https://www.youtube.com", 
     "different_link_per_data" : false,
     "different_img_per_data" : true,

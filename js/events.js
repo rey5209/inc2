@@ -13,6 +13,7 @@ $(document).ready(function() {
   var lokal_page_id = urlParams.pageId[0] 
   var lokal_media_id = urlParams.mediaId[0] 
   var link = '';
+  var embed_video = false;
 
   console.log(lokal_name)
   console.log(lokal_page_id)
@@ -63,15 +64,26 @@ $(document).ready(function() {
 
       // SET LINK from json
       
+      // NOT A DIFFERENT LINK PER LOCALS
       if(!different_link){ 
+
 
         if(data.jsonData[lokal_page_id-1].allow_popup_option){ //if allow popup option, else back to default
 
+          embed_video = data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].embed_link;
           link = data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].link;
-          $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+link+'" target="_blank"></a>'); 
+
+          if(embed_video)
+            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="#"  ></a>');  
+          else
+            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+link+'" target="_blank"></a>'); 
         }else{ 
+          embed_video = data.jsonData[lokal_page_id-1].embed_link;
           link = data.jsonData[lokal_page_id-1].link;
-          $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+link+'" target="_blank"></a>'); 
+          if(embed_video)
+            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="#" target="_blank"></a>'); 
+          else
+            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+link+'" target="_blank"></a>'); 
         }
       } 
 
