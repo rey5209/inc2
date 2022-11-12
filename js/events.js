@@ -163,6 +163,7 @@ $('.post-btn').click(function() {
 
     if(embed_video){
 
+      $('.main-event').hide(); 
     }else{ 
       $('.main-event').hide(); 
       $('.instruction-note').show(); 
@@ -275,6 +276,13 @@ function updateWaitingText(mins,secs){
         // 5 minutes = 300000
         // 10 min = 600000  
   }
+
+  var myModalEl = document.getElementById('staticBackdrop')
+  myModalEl.addEventListener('hidden.bs.modal', function (event) {
+    
+    $('.main-event').show(); 
+
+  })
   
   
     
