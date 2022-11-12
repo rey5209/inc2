@@ -87,6 +87,8 @@ $(document).ready(function() {
         }
       } 
 
+      console.log(embed_video)
+
       if(!different_img){ 
         var image = data.jsonData[lokal_page_id-1].image;
         $(".append-image").append(''+
@@ -103,8 +105,8 @@ $(document).ready(function() {
           $('.lokal_name').text(item.lokal) 
           array_duration = item.duration.split(":");
           if(different_link){ 
-            // $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+item.link+'" target="_blank"></a>'); 
-            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="#" target="_blank"></a>'); 
+            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+item.link+'" target="_blank"></a>'); 
+            // $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="#" target="_blank"></a>'); 
           }
           if(different_img)
             $(".append-image").append(''+  '<img class="img-fluid mx-auto d-block shadow-lg p-3 mb-5 bg-body rounded"src="img/'+item.image+'" alt=""></img>'+ '')
