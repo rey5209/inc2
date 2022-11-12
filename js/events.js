@@ -145,7 +145,7 @@ $('.post-btn').click(function() {
     $('.instruction-note').show(); 
     
     //  $( "#hidden-link" ).trigger( "click" );
-    //  document.getElementById('hidden-link').click();
+     document.getElementById('hidden-link').click();
 
     setInterval(function()
     {   

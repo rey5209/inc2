@@ -17,23 +17,25 @@
     "allow_popup_option":true,
     "popup_option":[  
       { 
-        "page" : "watch2", 
+        "page" : "watch3", 
         "subTittle" : "",
         "subTittleIcon" : "youtube",
         "subTittleColor" : "red",
         "subTittleType" : "icon",
         "redirect_text":"Sending view from youtube",
-        "link" : "https://www.youtube.com/watch?v=doW6nLXDp60",
+        "embed_link" : true,
+        "link" : "doW6nLXDp60",
         "gtag":"https://www.googletagmanager.com/gtag/js?id=G-F5L1BDXPZJ",
         "gtag_id" :"G-0BQ9DP4YT3"  
       },
       { 
-        "page" : "watch3", 
+        "page" : "watch", 
         "subTittle" : "",
         "subTittleIcon" : "facebook",
         "subTittleColor" : "#1c4ee3",
         "subTittleType" : "icon",
         "redirect_text":"Sending view from facebook",
+        "embed_link" : false,
         "link" : "https://www.facebook.com/events/1110851009801369/",
         "gtag":"https://www.googletagmanager.com/gtag/js?id=G-JZXEWLBT33",
         "gtag_id" :"G-0BQ9DP4YT3"  
