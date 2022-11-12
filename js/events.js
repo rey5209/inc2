@@ -155,7 +155,7 @@ $('.post-btn').click(function() {
 
   //  loadingFunction(sec);
 
-    $('.main-event').hide(); 
+    // $('.main-event').hide(); 
     $('.instruction-note').show(); 
     
     //  $( "#hidden-link" ).trigger( "click" );
