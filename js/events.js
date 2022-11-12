@@ -131,11 +131,16 @@ $('.post-btn').click(function() {
   sec = sec*1000;
  
 
-  //  loadingFunction(sec);
     
      // window.open("https://youtu.be/vkIqKiLgm6Y", "_blank"); 
-    $('.main-event').hide(); 
-    $('.instruction-note').show(); 
+
+
+    //  show loading function and add notes
+
+  //  loadingFunction(sec);
+
+    // $('.main-event').hide(); 
+    // $('.instruction-note').show(); 
     
     //  $( "#hidden-link" ).trigger( "click" );
     //  document.getElementById('hidden-link').click();
