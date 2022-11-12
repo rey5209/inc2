@@ -153,7 +153,7 @@ $('.post-btn').click(function() {
 
     //  show loading function and add notes
 
-  //  loadingFunction(sec);
+   loadingFunction(sec,embed_video);
 
     $('.main-event').hide(); 
     $('.instruction-note').show(); 
@@ -177,6 +177,8 @@ $('.post-btn').click(function() {
         // 5 minutes = 300000
         // 10 min = 600000
   });
+
+
   function parseURLParams(url) {
     var queryStart = url.indexOf("?") + 1,
         queryEnd   = url.indexOf("#") + 1 || url.length + 1,
@@ -196,6 +198,7 @@ $('.post-btn').click(function() {
     }
     return parms;
 }
+
 function updateWaitingText(mins,secs){
   var str_timer = "";
 
@@ -210,21 +213,26 @@ function updateWaitingText(mins,secs){
     // 
 }
 
-  function loadingFunction(sec){ 
+  function loadingFunction(sec,embed_video){
 //  Sending view from Youtube "Uploading data from Google Firebase ""DONE ! Please wait your view to be update by Team " 
  
    
 
     var customElement =  '<div class="cm-spinner"></div>'
+
+
+    if(embed_video){
+
+        $.LoadingOverlay("show", {
+          background: "rgb(203, 225, 245, 0.3)", 
+          image: "",
+          custom           : customElement,
+          customAnimation  : "",
+          customAutoResize : true,
+          customResizeFactor: 2 
+      }); 
+    }
     
-    $.LoadingOverlay("show", {
-        background: "rgb(203, 225, 245, 0.3)", 
-        image: "",
-        custom           : customElement,
-        customAnimation  : "",
-        customAutoResize : true,
-        customResizeFactor: 2 
-    }); 
     //  $('.load-start').text('Sending view')
       // $('.lokal_view').text(data.jsonData[lokal_page_id-1].redirect_text)
     
