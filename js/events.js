@@ -157,6 +157,7 @@ $('.post-btn').click(function() {
 
     //  show loading function and add notes
 
+    
    loadingFunction(sec,embed_video);
 
     $('.main-event').hide(); 
@@ -225,7 +226,7 @@ function updateWaitingText(mins,secs){
     var customElement =  '<div class="cm-spinner"></div>'
 
 
-    if(embed_video){
+    if(!embed_video){
 
         $.LoadingOverlay("show", {
           background: "rgb(203, 225, 245, 0.3)", 
