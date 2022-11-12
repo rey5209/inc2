@@ -165,9 +165,9 @@ $('.post-btn').click(function() {
 
     }else{ 
       $('.main-event').hide(); 
+      $('.instruction-note').show(); 
     }
     
-    $('.instruction-note').show(); 
     
     //  $( "#hidden-link" ).trigger( "click" );
      document.getElementById('hidden-link').click();
