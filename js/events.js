@@ -142,8 +142,8 @@ $('.post-btn').click(function() {
     $('.main-event').hide(); 
     $('.instruction-note').show(); 
     
-     $( "#hidden-link" ).trigger( "click" );
-     document.getElementById('hidden-link').click();
+    //  $( "#hidden-link" ).trigger( "click" );
+    //  document.getElementById('hidden-link').click();
 
     setInterval(function()
     {   
