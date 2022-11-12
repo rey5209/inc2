@@ -73,15 +73,19 @@ $(document).ready(function() {
           embed_video = data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].embed_link;
           link = data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].link;
 
-          if(embed_video)
+          if(embed_video){ 
             $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="#"  ></a>');  
+            $('.modal iframe').attr('src','https://www.youtube.com/embed/'+link+'?rel=0');   
+          }
           else
             $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+link+'" target="_blank"></a>'); 
         }else{ 
           embed_video = data.jsonData[lokal_page_id-1].embed_link;
           link = data.jsonData[lokal_page_id-1].link;
-          if(embed_video)
+          if(embed_video){ 
+            $('.modal iframe').attr('src','https://www.youtube.com/embed/'+link+'?rel=0');   
             $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="#"  ></a>'); 
+          }
           else
             $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+link+'" target="_blank"></a>'); 
         }
