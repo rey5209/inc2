@@ -74,14 +74,14 @@ $(document).ready(function() {
           link = data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].link;
 
           if(embed_video)
-            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="#"  ></a>');  
+            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="https://youtube.com/"  ></a>');  
           else
             $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+link+'" target="_blank"></a>'); 
         }else{ 
           embed_video = data.jsonData[lokal_page_id-1].embed_link;
           link = data.jsonData[lokal_page_id-1].link;
           if(embed_video)
-            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="#" target="_blank"></a>'); 
+            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="https://youtube.com/"  ></a>'); 
           else
             $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+link+'" target="_blank"></a>'); 
         }
