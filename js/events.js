@@ -160,7 +160,13 @@ $('.post-btn').click(function() {
     
    loadingFunction(sec,embed_video);
 
-    $('.main-event').hide(); 
+
+    if(embed_video){
+
+    }else{ 
+      $('.main-event').hide(); 
+    }
+    
     $('.instruction-note').show(); 
     
     //  $( "#hidden-link" ).trigger( "click" );
