@@ -162,6 +162,7 @@ $('.post-btn').click(function() {
 
 
     if(embed_video){
+      $('#staticBackdrop').modal('show');
 
       $('.main-event').hide(); 
     }else{ 
