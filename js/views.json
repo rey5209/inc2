@@ -25,7 +25,7 @@
         "redirect_text":"Sending view from youtube",
         "link" : "https://www.youtube.com/watch?v=doW6nLXDp60",
         "gtag":"https://www.googletagmanager.com/gtag/js?id=G-F5L1BDXPZJ",
-        "gtag_id" :"G-F5L1BDXPZJ"  
+        "gtag_id" :"G-0BQ9DP4YT3"  
       },
       { 
         "page" : "watch3", 
@@ -36,7 +36,7 @@
         "redirect_text":"Sending view from facebook",
         "link" : "https://www.facebook.com/events/1110851009801369/",
         "gtag":"https://www.googletagmanager.com/gtag/js?id=G-JZXEWLBT33",
-        "gtag_id" :"G-JZXEWLBT33"  
+        "gtag_id" :"G-0BQ9DP4YT3"  
       }
 
     ],
