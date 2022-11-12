@@ -16,7 +16,7 @@ $(document).ready(function() {
     share_type = urlParams.share[0]
     console.log(share_type)
   }
-
+  
   function parseURLParams(url) {
       var queryStart = url.indexOf("?") + 1,
           queryEnd   = url.indexOf("#") + 1 || url.length + 1,
@@ -119,7 +119,7 @@ $(document).ready(function() {
 
           str_popups += '' +
          ' <a href="'+item.page+'?mediaId='+(index+1)+'" class="me-4 text-reset text-danger  popup-choice'+current_page+'">  '+
-         '   <i class="fab fa-'+item.subTittleIcon+' center " style=" font-size: 13rem; color:'+item.subTittleColor+' "></i> '+
+         '   <i class="fab fa-'+item.subTittleIcon+' bg-white rounded-circle" style=" font-size: 15rem; color:'+item.subTittleColor+' "></i> '+
          '   <p class="h1 text-center bg-white">'+item.subTittle+'</p>'+
          ' </a>'+
          ' <br></br>';
@@ -132,7 +132,8 @@ $(document).ready(function() {
 
 
          
-        var page = item.page;
+        
+ 
         var redirectPage = item.redirectPage;
         var allow_popup_option = item.allow_popup_option;
         item.viewData.forEach(setLokals);
@@ -141,9 +142,6 @@ $(document).ready(function() {
 
           
             // Setup Lokal content and views for each page
-            
-            
-            
           if(item.divider){
               $('.append_table-'+count_page).append(""+
                 '<tr style=" background-color:'+item.bg+'; "> '+
@@ -163,7 +161,7 @@ $(document).ready(function() {
             }
 
             $('.append_table-'+count_page).append(""+
-            '<tr class="search-lokal " data-search="' + (item.lokal.toLowerCase())+ '"> '+
+            '<tr> '+
             '    <td > '+
             '        <a href="'+(redirectPage == true && allow_popup_option == false ? page+'?pageId='+count_page+'&lokal='+item.lokal : '#' )+'" class="lokals-item d-flex justify-content-between align-items-center" '+popup_trigger+' id="lokal_'+item.lokal+'">'+
             '          <div class="p-2 link-dark post-title">'+item.lokal+'</div> '+ 
@@ -175,7 +173,6 @@ $(document).ready(function() {
 
         }
 
-        
         // Just for empty space
         $('.append_table-'+count_page).append(""+
         '<tr> '+ 
@@ -290,53 +287,3 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
   });
   
 })
-
-$('#search_lokal').on('keyup', function() {
-  // $('.result-Australia East').hide()
-  if (event.which == 13) {
-    event.preventDefault();
-  }
-
-  search_keyword = $('#search_lokal').val()
-  searchResults(search_keyword)
-})
-
-
-$('#search_lokal').on('change', function() {
-
-  search_keyword = $('#search_lokal').val()
-  searchResults(search_keyword)
-  $('#search_lokal').trigger('keypress');
-})
-
-$('#search_lokal').on('keyup', function() {
-  //code to be executed
-}).on('keydown', function(e) {
-  if (e.keyCode == 8)
-    $('#search_lokal').trigger('keypress');
-});
-
-function searchResults(value) {
-
-  if (value == '') {
-
-    $(".search-lokal").show()
-  } else {
-    value = value.toLowerCase()
-
-    $(".search-lokal").hide()
-    
-    // $( 'table[data-search]' ).filter(function(){
-    //   return $(this).attr('data-search').toLowerCase()== value;
-    // }).show()
-    $("table").find("[data-search*='" + value + "']").show()
-    console.log(value)
-  }
-}
-
-
-$('.search-test').on('click', function() {
-  //code to be executed
-  search_keyword = $('#search_lokal').val()
-  searchResults(search_keyword)
-});

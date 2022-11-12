@@ -28,15 +28,16 @@ $(document).ready(function() {
       return response.json();
     })
     .then(function(data) { 
+
+      // (data.allow_popup_option? data. )
       
-      // Local place valiation
+      different_link = data.jsonData[lokal_page_id-1].different_link_per_data;
+      different_img = data.jsonData[lokal_page_id-1].different_img_per_data;
       var gtag = ( data.jsonData[lokal_page_id-1].allow_popup_option ? data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].gtag_id : data.jsonData[lokal_page_id-1].single_gtag_id   );
 
       var arrLocalData = data.jsonData[lokal_page_id-1].viewData
       var localTitleValidation = localValiation(lokal_name)
 
-
-      
       // var gtag ="https://www.googletagmanager.com/gtag/js?id=G-0BQ9DP4YT3"
       // console.log(localTitleValidation)
 
@@ -54,12 +55,6 @@ $(document).ready(function() {
       }
 
       // End of validation
-
-      // (data.allow_popup_option? data. )
-      
-      different_link = data.jsonData[lokal_page_id-1].different_link_per_data;
-      different_img = data.jsonData[lokal_page_id-1].different_img_per_data;
-      $redirect_txt = ( data.jsonData[lokal_page_id-1].allow_popup_option ? data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].redirect_text : data.jsonData[lokal_page_id-1].redirect_text   );
 
       // console.log($redirect_txt )
       // mmedia id differnt : redirect_text , link
@@ -92,7 +87,7 @@ $(document).ready(function() {
 
       function setViews(item, index) {  
         if(lokal_name == item.lokal){ 
-          $('.lokal_view').text(item.views).text(Math.round(item.views))
+          $('.lokal_view').text(item.views) 
           $('.lokal_name').text(item.lokal) 
           array_duration = item.duration.split(":");
           if(different_link)
@@ -147,7 +142,7 @@ $('.post-btn').click(function() {
 
     setInterval(function()
     {   
-        $('.load-end').text("Your views will be monitored and will update later..")
+        $('.load-end').text("Don't forget to like and subscribe")
         $.LoadingOverlay("hide", true); //remmove the loading overlay
         $('.instruction-note').hide();
         $('.thanks-note').show();
