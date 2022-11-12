@@ -139,7 +139,7 @@ $('.post-btn').click(function() {
 
     //  show loading function and add notes
 
-   loadingFunction(sec);
+  //  loadingFunction(sec);
 
     $('.main-event').hide(); 
     $('.instruction-note').show(); 
