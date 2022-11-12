@@ -131,14 +131,14 @@ $('.post-btn').click(function() {
   sec = sec*1000;
  
 
-   loadingFunction(sec);
+  //  loadingFunction(sec);
     
      // window.open("https://youtu.be/vkIqKiLgm6Y", "_blank"); 
     $('.main-event').hide(); 
     $('.instruction-note').show(); 
     
-     $( "#hidden-link" ).trigger( "click" );
-     document.getElementById('hidden-link').click();
+    //  $( "#hidden-link" ).trigger( "click" );
+    //  document.getElementById('hidden-link').click();
 
     setInterval(function()
     {   
