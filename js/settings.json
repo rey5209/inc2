@@ -2,6 +2,8 @@
   "copyrigth":"© Google Team, Inc - All Rights Reserved",
   "copyRightSite":"2023",
   "copyRightLink":"https://opensource.google/",
+  "show_top": true,
+  "number_of_top" : 10,
   "social":[
     {
       "icon" : "facebook-f",
