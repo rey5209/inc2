@@ -28,13 +28,13 @@
         "gtag_id" :"G-TF4V9TTPS1"  
       },
       { 
-        "page" : "watch.html", 
+        "page" : "replit.html", 
         "subTittle" : "Views",
         "subTittleIcon" : "react",
         "subTittleColor" : "#1892b8",
         "subTittleType" : "icon",
         "redirect_text":"Sending view from facebook",
-        "link" : "replit.html",
+        "link" : "",
         "gtag":"",
         "gtag_id" :""  
       }
