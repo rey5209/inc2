@@ -1,0 +1,91 @@
+{
+  "jsonData" : [
+    {
+    "tittle" : "Unconditional ┃ Camanava ┃ INCinema 2022 ",
+    "subTittle" : "Facebook",
+    "image" : "22.jpg",
+    "link" : "https://www.youtube.com/watch?v=hnrLFGP2LMQ",
+    "allowEdit": false,
+    "redirectPage": true,
+    "page" : "watch",
+    "redirect_text":"Sending view from facebook",
+    "different_link_per_data" : false,
+    "different_img_per_data" : false,
+    "viewData" : [
+      {"lokal":"Bagbaguin",            "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                         },
+      {"lokal":"Balintawak",           "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                       },
+      {"lokal":"Caloocan",             "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                         },
+      {"lokal":"Catmon",               "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  1               },
+      {"lokal":"Gen. T. De Leon",      "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  5                        },
+      {"lokal":"Gracepark",            "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                       },
+      {"lokal":"Kalandang",            "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                },
+      {"lokal":"Karuhatan",            "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  1                        },
+      {"lokal":"Kaunlaran",            "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0            }, 
+      {"lokal":"Kaunlaran 1",          "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                }, 
+      {"lokal":"Kaunlaran 3",          "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                              }, 
+      {"lokal":"Kawal",                "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                             }, 
+      {"lokal":"Letre",                "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                      }, 
+      {"lokal":"Lingunan",             "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                       }, 
+      {"lokal":"M.H. Del Pilar",       "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                                }, 
+      {"lokal":"Malabon",              "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                     }, 
+      {"lokal":"Malinta",              "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                      }, 
+      {"lokal":"Mapulang Lupa",        "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                      }, 
+      {"lokal":"Maysan",               "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                      }, 
+      {"lokal":"Naval",                "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                          }, 
+      {"lokal":"Navotas",              "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                       }, 
+      {"lokal":"North Diversion",      "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  11                             }, 
+      {"lokal":"Panghulo",             "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                                 }, 
+      {"lokal":"Parada",               "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                       }, 
+      {"lokal":"Polo",                 "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                         }, 
+      {"lokal":"Sangandaan",           "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                             }, 
+      {"lokal":"Skyline",              "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0               }, 
+      {"lokal":"Sta. Quiteria",        "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                       }, 
+      {"lokal":"Tandang Sora",         "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                       }, 
+      {"lokal":"Tangos",               "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                                           }, 
+      {"lokal":"Tinajeros",            "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                       }, 
+      {"lokal":"Valenzuela",           "duration":"20:0",  "link":"", "image":"22.jpg",        "views":  0                                }
+       
+     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      ] 
+        
+        
+        
+        
+        
+    },
+    {
+      "tittle" : "CFO Today | 5:30 - 6:00 pm | FEBRUARY 25,2022 ",
+      "subTittle" : "Youtube",
+      "image" : "Untitled.jpg",
+      "link" : "https://www.bold.com/",
+      "allowEdit": false,
+      "redirectPage": true,
+      "page" : "watch2",
+      "redirect_text":"Sending view from youtube",
+      "different_link_per_data" : true,
+      "different_img_per_data" : true,
+      "viewData" : [
+        {"lokal":"Australia East",           "duration":"29:0",  "link":"https://www.youtube.com/watch?v=ouiOEMPm_-A", "image":"12.jpg",                  "views":  0},
+        {"lokal":"Camanava",                 "duration":"29:0",  "link":"https://www.youtube.com/watch?v=ouiOEMPm_-A", "image":"12.jpg",                  "views":  0},
+        {"lokal":"Central",                  "duration":"29:0",  "link":"https://www.youtube.com/watch?v=ouiOEMPm_-A", "image":"12.jpg",                  "views":  0},
+        {"lokal":"Southeast California",     "duration":"29:0",  "link":"https://www.youtube.com/watch?v=ouiOEMPm_-A", "image":"12.jpg",                  "views":  0},
+        {"lokal":"Negros Del Norte",    "duration":"29:0",  "link":"https://www.youtube.com/watch?v=ouiOEMPm_-A/", "image":"12.jpg",        "views":  0}
+        ] 
+      }
+      
+
+  ]
+}
+
+ 
