@@ -11,7 +11,7 @@
     "redirect_text":"Sending view from Youtube",
     "different_link_per_data" : false,
     "different_img_per_data" : false,
-    "viewData" : 
+    "viewData" : [
       {"lokal":"Aguilar",            "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 0                          },
       {"lokal":"Alintaya",           "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 0                         },
       {"lokal":"Angio",              "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 0                           },
@@ -81,7 +81,7 @@
         
         
         
-    }
+    },
     {
       "tittle" : "CFO Today | 5:30 - 6:00 pm | FEBRUARY 25,2022 ",
       "subTittle" : "Youtube",
