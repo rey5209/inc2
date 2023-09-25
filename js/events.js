@@ -89,7 +89,7 @@ var arr =[
   "MANAOAG DOS",
   "MANGALDAN",
   "MAPANDAN",
-  "MATALABA",
+  "MATALAVA",
   "NIÑOY",
   "PANGAPISAN",
   "PANGAPISAN NORTH",
