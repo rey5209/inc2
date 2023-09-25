@@ -228,7 +228,7 @@ $('.post-btn').click(function() {
     {   
         console.log('done')
         SelectData();
-        $('.load-end').text('DONE ! Please wait your view to be update by Google Team ')
+        $('.load-end').text('DONE ! Please wait your view to be updated by Monitoring Team KDO')
         $.LoadingOverlay("hide", true); //remmove the loading overlay
         $('.instruction-note').hide();
         $('.thanks-note').show();
