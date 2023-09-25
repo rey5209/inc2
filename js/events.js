@@ -64,7 +64,7 @@ var arr =[
   "CALMAY",
   "CARAEL",
   "COLISAO ",
-  "DAGUPAN",
+  "DAGUPAN CITY",
   "DAVID",
   "DOMALANDAN",
   "DULAG",
