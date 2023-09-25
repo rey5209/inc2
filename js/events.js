@@ -91,6 +91,7 @@ var arr =[
   "MAPANDAN",
   "MATALABA",
   "NIÑOY",
+  "PANGAPISAN",
   "PANGAPISAN NORTH",
   "PALUA EXT.",
   "PUGARO",
