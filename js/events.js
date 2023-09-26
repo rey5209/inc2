@@ -44,7 +44,7 @@ var date = today //data will be separated by day
 var arr =[
     
   "AGUILAR",
-  "ALINTAYA",
+  "ALITAYA",
   "ANGIO",
   "AWAY",
   "BAAY EXT",
