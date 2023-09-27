@@ -390,6 +390,8 @@ function updateWaitingText(mins,secs){
         // INSERT DATA FUNCTION
 
         function InsertData(localName, countval){
+          console.log('localname: '+ localName+' count: '+ countval )
+
             set(ref(db, "Views/"+date+"/"+localName),{
                 name: localName,
                 count: countval
