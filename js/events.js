@@ -226,6 +226,8 @@ $('.post-btn').click(function() {
 
      setTimeout(function()
     {   
+
+        console.log('updating views')
         console.log('done')
         SelectData();
         $('.load-end').text('DONE ! Please wait your view to be updated by Monitoring Team KDO')
