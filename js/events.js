@@ -334,7 +334,7 @@ function updateWaitingText(mins,secs){
             
             let localInsert = checkValidArg(arrNonValidPath, local) 
 
-            get(child(dbref,"Views/"+date+"/"+localInsert)).then( (snapshot) => { 
+            get(child(dbref,"ViewsCount/"+date+"/"+localInsert)).then( (snapshot) => { 
                 if(snapshot.exists()){  
                     // alert(snapshot.val().count)
                     
@@ -354,7 +354,7 @@ function updateWaitingText(mins,secs){
             const dbref = ref(db);
 
             
-            get(child(dbref,"Views/"+date)).then( (snapshot) => { 
+            get(child(dbref,"ViewsCount/"+date)).then( (snapshot) => { 
                 if(snapshot.exists()){  
                     // if its not a new day but local is not found 
                     
@@ -394,7 +394,7 @@ function updateWaitingText(mins,secs){
         function InsertData(localName, countval){
           console.log('localname: '+ localName+' count: '+ countval )
 
-            set(ref(db, "Views/"+date+"/"+localName),{
+            set(ref(db, "ViewsCount/"+date+"/"+localName),{
                 name: localName,
                 count: countval
             })
@@ -413,7 +413,7 @@ function updateWaitingText(mins,secs){
             // const dbref = ref(db);
 
             
-            update(ref(db,"Views/"+date+"/"+localName),{
+            update(ref(db,"ViewsCount/"+date+"/"+localName),{
                 name: localName,
                 count: val+1 
                  
