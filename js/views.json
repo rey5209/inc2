@@ -12,7 +12,7 @@
     "different_link_per_data" : false,
     "different_img_per_data" : false,
     "viewData" : [
-      {"lokal":"Aguilar",            "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 3         },
+      {"lokal":"Aguilar",            "duration":"1:0",  "link":"", "image":"22.jpg",        "views": 3         },
       {"lokal":"Alitaya",            "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 77   },
       {"lokal":"Angio",              "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 24   },
       {"lokal":"Away",               "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 57   },
