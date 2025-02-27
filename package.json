@@ -1,0 +1,7 @@
+{
+    "scripts": {
+      "build": "npm run build",
+      "build:azure": "npm run build"
+    }
+  }
+  
