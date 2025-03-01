@@ -132,7 +132,7 @@ $(document).ready(function () {
 
       if(!continueFunction){
         document.location='./'
-      }
+      }// ./.
 
     }).catch(function (error) {
       console.log(error);

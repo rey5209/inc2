@@ -75,7 +75,7 @@ $(document).ready(function () {
 
   var unique = + new Date();
   // console.log(unique);
-  var top = false;
+  var top = true;
   var number_tops = 0;
 
   fetch("js/settings.json?ver=" + unique)
