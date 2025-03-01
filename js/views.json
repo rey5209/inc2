@@ -1,18 +1,19 @@
 {
   "jsonData" : [
     {
-    "tittle" : "Hi Kumusta? Okay ka lang ba? ┃ Lingayen Pangasinan ┃ INCinema 2023 ",
+    "tittle" : "TITLE OF PROJECT ┃ Lingayen Pangasinan ┃ 2025 ",
     "subTittle" : "Facebook",
     "image" : "22.jpg",
-    "link" : "https://youtu.be/11iBD1PSklY?si=AN9Jm_llboHw1x_9&t=1",
+    "link" : "",
     "allowEdit": false,
     "redirectPage": true,
-    "page" : "watch",
-    "redirect_text":"Sending view from Youtube",
+    "page" : "watch.html",
+    "redirect_text":"Sending View From Youtube",
     "different_link_per_data" : false,
     "different_img_per_data" : false,
+    "viewDataType": "firebase",
     "viewData" : [
-      {"lokal":"Aguilar",            "duration":"1:0",  "link":"", "image":"22.jpg",        "views": 3         },
+      {"lokal":"Aguilar",            "duration":"0:10",   "link":"", "image":"22.jpg",        "views": 3         },
       {"lokal":"Alitaya",            "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 77   },
       {"lokal":"Angio",              "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 24   },
       {"lokal":"Away",               "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 57   },
@@ -52,7 +53,7 @@
       {"lokal":"Maasin Ext",         "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 4        },
       {"lokal":"Mabilao",            "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 4       },
       {"lokal":"Magtaking",          "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 10      },
-      {"lokal":"Malindong Ext",      "duration":"44:0", "link":"", "image":"22.jpg",         "views": 2        },
+      {"lokal":"Malindong Ext",      "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 2        },
       {"lokal":"Mamalingling",       "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 15      }, 
       {"lokal":"Manaoag",            "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 284                             }, 
       {"lokal":"Manaoag Dos",        "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 10        }, 
@@ -70,7 +71,7 @@
       {"lokal":"San Jacinto",        "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 1724                             },
       {"lokal":"San Ramon Ext",      "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 2            }, 
       {"lokal":"Talibaew Ext",       "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 1            }, 
-      {"lokal":"Tulong",             "duration":"44:0",  "link":"", "image":"22.jpg",        "views": 19           } 
+      {"lokal":"Tulong",             "duration":"0:10",  "link":"", "image":"22.jpg",        "views": 19           } 
         
 
         
