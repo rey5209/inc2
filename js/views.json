@@ -7,7 +7,7 @@
     "link" : "",
     "allowEdit": false,
     "redirectPage": true,
-    "page" : "watch.html",
+    "page" : "watch",
     "redirect_text":"Sending View From Youtube",
     "different_link_per_data" : false,
     "different_img_per_data" : false,
