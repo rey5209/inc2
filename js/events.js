@@ -106,8 +106,10 @@ $(document).ready(function () {
 
 
       function setViews(item, index) {
+        console.log(local,item.lokal.toUpperCase())
 
-        if (local == item.lokal.toUpperCase()) {
+        if (local === item.lokal.toUpperCase()) {
+          // console.log('pasok')
           continueFunction = true
  
           if (data.jsonData[lokal_page_id - 1].viewDataType === 'firebase') {
