@@ -153,7 +153,7 @@ $(document).ready(function () {
         // }
 
         if (item?.viewDataType === 'firebase') {
-          GetAllDataRealtime("tbody" + count_page, "maintable" + count_page, { redirectPage: redirectPage, count_page: count_page, page: page }, "viewTotal" );
+          GetAllDataRealtime("tbody" + count_page, "maintable" + count_page, { redirectPage: redirectPage, count_page: count_page, page: page }, "viewTotal", true );
 
         } else {
           const appendedLokals = item.viewData.map((item, index) => {
@@ -218,7 +218,7 @@ $(document).ready(function () {
 
 
           if (item?.viewDataType === 'firebase') {
-            GetAllDataRealtime("tbodyTable" + count_page, "totaltable" + count_page, { redirectPage: false, count_page: count_page, page: '#' }, "viewTotal");
+            GetAllDataRealtime("tbodyTable" + count_page, "totaltable" + count_page, { redirectPage: false, count_page: count_page, page: '#' }, "viewTotal", false);
 
           } else {
 
@@ -367,7 +367,7 @@ $(document).ready(function () {
 
   // Get All Data REALTIME
 
-  function GetAllDataRealtime(id, table, metaData, path) {
+  function GetAllDataRealtime(id, table, metaData, path, isRegular) {
     // document.getElementById("tbody").innerHTML ="";
     const que = query(ref(db, path));
 
@@ -380,7 +380,7 @@ $(document).ready(function () {
 
 
       console.log(responseData, id, table)
-      if (path != 'viewTotal') {
+      if (isRegular) {
 
         const customFunction = (meta) => {
 
