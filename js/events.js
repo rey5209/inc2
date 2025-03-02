@@ -290,7 +290,7 @@ $(document).ready(function () {
 
     let localInsert = checkValidArg(arrNonValidPath, local)
     console.log(localInsert)
-    const que = query(ref(db, "ViewsCount/" + date + "/" + localInsert));
+    const que = query(ref(db, "viewTotal/" + localInsert));
         // const que = query(ref(db, path));
     
     onValue(que, (snapshot) => {
@@ -298,7 +298,7 @@ $(document).ready(function () {
       snapshot.forEach((childSnapshot) => {
         responseData.push(childSnapshot.val());
       }); 
-      console.log("ViewsCount/" + date + "/" + local)
+      // console.log("ViewsCount/" + date + "/" + local)
       console.log(responseData)
       $('.lokal_view').text(Math.round(responseData[0] ?? 0)) 
     }) 
