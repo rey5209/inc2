@@ -153,7 +153,7 @@ $(document).ready(function () {
         // }
 
         if (item?.viewDataType === 'firebase') {
-          GetAllDataRealtime("tbody" + count_page, "maintable" + count_page, { redirectPage: redirectPage, count_page: count_page, page: page }, "ViewsCount/" + today);
+          GetAllDataRealtime("tbody" + count_page, "maintable" + count_page, { redirectPage: redirectPage, count_page: count_page, page: page }, "viewTotal" );
 
         } else {
           const appendedLokals = item.viewData.map((item, index) => {
