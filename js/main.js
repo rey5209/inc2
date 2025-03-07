@@ -86,38 +86,35 @@ $(document).ready(function () {
       top = data.show_top
       number_tops = data.number_of_top
 
-    }).catch(function (error) {
-      console.log(error);
-    });
+      //inner
+      fetch("js/views.json?ver=" + unique)
+        .then(response => {
+          return response.json();
+        })
+        .then(function (data) {
+          var count_page = 1;
+          // console.log(data.today);
 
-  fetch("js/views.json?ver=" + unique)
-    .then(response => {
-      return response.json();
-    })
-    .then(function (data) {
-      var count_page = 1;
-      // console.log(data.today);
+          data.jsonData.forEach(setTables);
+          // data.yesterday.forEach(setViewsYesteday); 
 
-      data.jsonData.forEach(setTables);
-      // data.yesterday.forEach(setViewsYesteday); 
+          function setPages(item, index) {
 
-      function setPages(item, index) {
+          }
 
-      }
+          function setTables(item, index) {
 
-      function setTables(item, index) {
+            // Pagination setup
+            max_page++;
+            page_main_tittles.push(item.tittle);
+            page_sub_tittles.push(item.subTittle);
 
-        // Pagination setup
-        max_page++;
-        page_main_tittles.push(item.tittle);
-        page_sub_tittles.push(item.subTittle);
+            // Setup Table content for views per page
 
-        // Setup Table content for views per page
-
-        var total = 0;
-        // var tittle = item.tittle;
-        $('.append_pages').append(
-          `
+            var total = 0;
+            // var tittle = item.tittle;
+            $('.append_pages').append(
+              `
         <table name="${item.tittle}" class="table table-striped table-hover table-paging table-page-${count_page}" id="maintable${count_page}"> 
             <thead>
               <tr > 
@@ -133,32 +130,32 @@ $(document).ready(function () {
         `)
 
 
-        var page = item.page;
-        var redirectPage = item.redirectPage;
-        // item.viewData.forEach(setLokals);
-        // function setLokals(item, index) {
-        //   total += item.views; 
+            var page = item.page;
+            var redirectPage = item.redirectPage;
+            // item.viewData.forEach(setLokals);
+            // function setLokals(item, index) {
+            //   total += item.views; 
 
-        //   // Setup Lokal content and views for each page
-        //   $('.append_table-'+count_page).append(""+
-        //   '<tr> '+
-        //   '    <td > '+
-        //   '        <a href="'+(redirectPage == true? page+'?pageId='+count_page+'&lokal='+item.lokal : '#' )+'" class="lokals-item d-flex justify-content-between align-items-center" id="lokal_'+item.lokal+'">'+
-        //   '          <div class="p-2 link-dark post-title">'+item.lokal+'</div> '+
-        //   '          <div class="p-2 link-dark view-counter '+item.lokal+'_view">'+Math.round(item.views)+'</div>'+
-        //   '        </a>'+
-        //   '    </td>  '+
-        //   '  </tr>  '+
-        //   "")
-        // }
+            //   // Setup Lokal content and views for each page
+            //   $('.append_table-'+count_page).append(""+
+            //   '<tr> '+
+            //   '    <td > '+
+            //   '        <a href="'+(redirectPage == true? page+'?pageId='+count_page+'&lokal='+item.lokal : '#' )+'" class="lokals-item d-flex justify-content-between align-items-center" id="lokal_'+item.lokal+'">'+
+            //   '          <div class="p-2 link-dark post-title">'+item.lokal+'</div> '+
+            //   '          <div class="p-2 link-dark view-counter '+item.lokal+'_view">'+Math.round(item.views)+'</div>'+
+            //   '        </a>'+
+            //   '    </td>  '+
+            //   '  </tr>  '+
+            //   "")
+            // }
 
-        if (item?.viewDataType === 'firebase') {
-          GetAllDataRealtime("tbody" + count_page, "maintable" + count_page, { redirectPage: redirectPage, count_page: count_page, page: page }, "viewTotal", true );
+            if (item?.viewDataType === 'firebase') {
+              GetAllDataRealtime("tbody" + count_page, "maintable" + count_page, { redirectPage: redirectPage, count_page: count_page, page: page }, "viewTotal", true);
 
-        } else {
-          const appendedLokals = item.viewData.map((item, index) => {
-            total += item.views;
-            return `
+            } else {
+              const appendedLokals = item.viewData.map((item, index) => {
+                total += item.views;
+                return `
             <tr> 
                 <td > 
                     <a href="${(redirectPage == true ? page + '?pageId=' + count_page + '&lokal=' + item.lokal : '#')}" class="lokals-item d-flex justify-content-between align-items-center" id="lokal_${item.lokal}">
@@ -168,11 +165,11 @@ $(document).ready(function () {
                 </td>  
               </tr>  
             `
-          })
-          $('.append_table-' + count_page).append(appendedLokals)
+              })
+              $('.append_table-' + count_page).append(appendedLokals)
 
-          // Just for empty space
-          $('.append_table-' + count_page).append(`
+              // Just for empty space
+              $('.append_table-' + count_page).append(`
             <tr> 
               <td >        
                 <div class="lokals-item lokals-footer d-flex justify-content-between align-items-center">
@@ -183,8 +180,8 @@ $(document).ready(function () {
             </tr>
               `)
 
-          // Get total at the end of every page
-          $('.append_table-' + count_page).append(`
+              // Get total at the end of every page
+              $('.append_table-' + count_page).append(`
             <tr> 
               <td >        
                 <div class="lokals-item lokals-footer d-flex justify-content-between align-items-center">
@@ -194,14 +191,14 @@ $(document).ready(function () {
               </td>  
             </tr>
               `)
-        }
+            }
 
 
 
-        //tops xx locals  
-        if (top) {
+            //tops xx locals  
+            if (top) {
 
-          $('.append_tops').append(`
+              $('.append_tops').append(`
             <table   class="table table-striped table-hover top_pages_table top_pages-tables-${count_page}"  id="totaltable${count_page}">
                 <thead>
                   <tr > 
@@ -217,22 +214,22 @@ $(document).ready(function () {
             `)
 
 
-          if (item?.viewDataType === 'firebase') {
-            GetAllDataRealtime("tbodyTable" + count_page, "totaltable" + count_page, { redirectPage: false, count_page: count_page, page: '#' }, "viewTotal", false);
+              if (item?.viewDataType === 'firebase') {
+                GetAllDataRealtime("tbodyTable" + count_page, "totaltable" + count_page, { redirectPage: false, count_page: count_page, page: '#' }, "viewTotal", false);
 
-          } else {
+              } else {
 
-            var arrTops = item.viewData;
-            arrTops.sort(function (a, b) {
-              return b.views - a.views;
-            });
-            arrTops = arrTops.slice(0, number_tops);
+                var arrTops = item.viewData;
+                arrTops.sort(function (a, b) {
+                  return b.views - a.views;
+                });
+                arrTops = arrTops.slice(0, number_tops);
 
-            arrTops.forEach((item, index) => {
-              total += item.views;
+                arrTops.forEach((item, index) => {
+                  total += item.views;
 
-              // Setup Lokal content and views for each page
-              $('.top_pages-' + count_page).append(`
+                  // Setup Lokal content and views for each page
+                  $('.top_pages-' + count_page).append(`
                 <tr> 
                     <td > 
                         <a href="${(redirectPage == true ? page + '?pageId=' + count_page + '&lokal=' + item.lokal : '#')}" class="lokals-item d-flex justify-content-between align-items-center" id="lokal_${item.lokal}">
@@ -242,21 +239,27 @@ $(document).ready(function () {
                     </td>  
                   </tr>  
                 `)
-            });
+                });
+              }
+
+
+
+            }
+
+
+
+            count_page++;
           }
 
 
 
-        }
+          updatePaging(current_page, max_page, page_main_tittles, page_sub_tittles)
+
+        }).catch(function (error) {
+          console.log(error);
+        });
 
 
-
-        count_page++;
-      }
-
-
-
-      updatePaging(current_page, max_page, page_main_tittles, page_sub_tittles)
 
     }).catch(function (error) {
       console.log(error);
@@ -422,7 +425,7 @@ $(document).ready(function () {
 
         arrTops = arrTops.slice(0, number_tops);
         console.log(arrTops)
- 
+
         AddAllItemsToTable(arrTops, id, table, metaData, customFunction);
       }
 
