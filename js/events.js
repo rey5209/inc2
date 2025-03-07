@@ -334,12 +334,12 @@ $(document).ready(function () {
         UpdateData(snapshot.val().count, localInsert, "viewTotal/" + localInsert)
       } else {
         // alert("No Data Found")  
-        arr.forEach((arrVal) => {
-          // console.log(arrVal) 
-          var arrVal = checkValidArg(arrNonValidPath, arrVal)
-          InsertData(arrVal, 0, "viewTotal/" + arrVal)
-          // console.log(arrVal);
-        })
+        // arr.forEach((arrVal) => {
+        //   // console.log(arrVal) 
+        //   var arrVal = checkValidArg(arrNonValidPath, arrVal)
+        //   InsertData(arrVal, 0, "viewTotal/" + arrVal)
+        //   // console.log(arrVal);
+        // })
       }
     }).catch((error) => {
       alert("Unssuccessful, error " + error)
