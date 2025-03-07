@@ -30,7 +30,7 @@ export const arr =[
     "CALIT",
     "CALMAY",
     "CARAEL",
-    "COLISAO ",
+    "COLISAO",
     "DAGUPAN CITY",
     "DAVID",
     "DOMALANDAN",
