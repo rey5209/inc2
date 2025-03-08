@@ -186,7 +186,10 @@ $(document).ready(function () {
       console.log('done')
       SelectData(); // post - firebase 
       // updateLocalView()
-      $('.load-end').html('"Please contact your KDO Officer if you encounter an error, so our Data Engineer can arrange to fix it."<br><br>"Please bear in mind that your view has been counted on our end, but it is not final and may change due to the behavior of each client."<br><br>"Refresh the page to rewatch."');
+      $('.load-end').html(`
+        "Please contact your KDO Officer if you encounter an error, so our Data Engineer can arrange to fix it."<br><br>
+        "Refresh the page to rewatch."
+    `);
       $.LoadingOverlay("hide", true); //remmove the loading overlay
       $('.instruction-note').hide();
       $('.thanks-note').show();
