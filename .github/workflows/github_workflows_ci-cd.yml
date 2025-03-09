@@ -23,7 +23,7 @@ jobs:
       with:
         node-version: '16'
 
-    # Example: Install dependencies (if using npm or yarn, but skipped here since there's no package.json)
+    # Install dependencies (if using npm or yarn, but skipped here since there's no package.json)
     # - name: Install dependencies
     #   run: npm install
 
@@ -38,6 +38,26 @@ jobs:
         stylelint "**/*.css"
         # Lint JavaScript files
         eslint "**/*.js"
+
+    # Set up Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    # Install Python dependencies (if using requirements.txt)
+    - name: Install Python dependencies
+      run: |
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        fi
+
+    # Run Python script (if applicable)
+    - name: Run Python script
+      run: |
+        if [ -f script.py ]; then
+          python script.py
+        fi
 
     # Example: Run tests (if any test framework is used, but skipped here since there are no specifics)
     # - name: Run tests
@@ -57,9 +77,22 @@ jobs:
       with:
         node-version: '16'
 
-    # Example: Install dependencies (if using npm or yarn, but skipped here since there's no package.json)
+    # Install dependencies again if needed
     # - name: Install dependencies
     #   run: npm install
+
+    # Set up Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    # Install Python dependencies again if needed
+    - name: Install Python dependencies
+      run: |
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        fi
 
     - name: Deploy
       run: |
