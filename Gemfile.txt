@@ -2,5 +2,4 @@ source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3.4"
 gem "jekyll-feed"
-gem "jekyll-pageniate"  # Ensure the spelling matches your _config.yml file.
-# gem "jekyll-sitemap"  # Uncomment if you need sitemap support.
+gem "jekyll-paginate"
