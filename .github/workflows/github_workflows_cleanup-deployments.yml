@@ -1,0 +1,30 @@
+name: Cleanup Old Deployments
+
+on:
+  schedule:
+    # Runs at 00:00 on the 1st of every month
+    - cron: '0 0 1 * *'
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install requests
+      run: python -m pip install requests
+
+    - name: Cleanup Old Deployments
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REPO: ${{ github.repository }}
+        DAYS_THRESHOLD: 30 # Number of days to keep deployments
+      run: |
+        python .github/scripts/cleanup_deployments.py
