@@ -1,0 +1,9 @@
+{
+  "name": "inc2",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "bundle install && bundle exec jekyll build"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
