@@ -1,0 +1,26 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.1)
+    bundler (2.3.26)
+    colorator (1.1.0)
+    concurrent-ruby (1.1.10)
+    jekyll (4.3.4)
+      addressable (~> 2.7)
+      bundler (>= 1.15.4)
+      colorator (~> 1.1)
+    jekyll-feed (0.16.0)
+      jekyll (>= 3.0, < 5.0)
+    jekyll-paginate (1.1.0)
+      jekyll (>= 3.0, < 5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  jekyll (~> 4.3.4)
+  jekyll-feed
+  jekyll-paginate
+
+BUNDLED WITH
+   2.3.26
