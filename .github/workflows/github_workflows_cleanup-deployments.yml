@@ -25,6 +25,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REPO: ${{ github.repository }}
-        DAYS_THRESHOLD: 30 # Number of days to keep deployments
       run: |
         python .github/scripts/cleanup_deployments.py
