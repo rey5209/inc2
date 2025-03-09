@@ -1,19 +1,17 @@
-```yaml
-title: CFO TODAY!
-email: rey52090@gmail.com
-description: >- # This mean ignore newlines until base url;
+title: "CFO TODAY!"
+email: "rey52090@gmail.com"
+description: "This means ignore newlines until base URL."
 baseurl: "https://rey5209.github.io/inc"
 url: ""
-twitter_username:
-github_username: rey5209
-author: Rey Ramos Tuñacao
+twitter_username: ""
+github_username: "rey5209"
+author: "Rey Ramos Tuñacao"
 
 # Build Settings 
-Markdown: kramdown  
+markdown: kramdown  
 paginate: 10
 paginate_path: "/post"
 plugins:
- - jekyll-feed
- - jekyll-paginate
- - jekyll-sitemap
-```
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
