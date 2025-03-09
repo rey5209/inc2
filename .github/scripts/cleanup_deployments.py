@@ -22,7 +22,11 @@ def delete_deployment(deployment_id):
         "Accept": "application/vnd.github.v3+json",
     }
     response = requests.delete(url, headers=headers)
-    response.raise_for_status()
+    if response.status_code == 204:
+        print(f"Successfully deleted deployment {deployment_id}")
+    else:
+        print(f"Failed to delete deployment {deployment_id}: {response.status_code} {response.text}")
+        response.raise_for_status()
 
 def main():
     deployments = get_deployments()
@@ -30,7 +34,10 @@ def main():
     if len(deployments) > 1:
         for deployment in deployments[1:]:
             print(f"Deleting deployment {deployment['id']} created on {deployment['created_at']}")
-            delete_deployment(deployment["id"])
+            try:
+                delete_deployment(deployment["id"])
+            except requests.exceptions.HTTPError as e:
+                print(f"Error deleting deployment {deployment['id']}: {e}")
 
 if __name__ == "__main__":
     main()
