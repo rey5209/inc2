@@ -356,7 +356,7 @@ $(document).ready(function () {
     // for Totals
     get(child(dbref, EXTERNAL_PATH+"viewTotal/" + EXTERNAL_PATH_ENDPOINT)).then((snapshot) => {
       if (snapshot.exists()) { 
-        UpdateData(snapshot.val().count, EXTERNAL_PATH, EXTERNAL_PATH+"viewTotal/" + EXTERNAL_PATH_ENDPOINT)
+        UpdateData(snapshot.val().count, EXTERNAL_PATH_ENDPOINT, EXTERNAL_PATH+"viewTotal/" + EXTERNAL_PATH_ENDPOINT)
       } else {
         // alert("No Data Found")  
         // arr.forEach((arrVal) => {
