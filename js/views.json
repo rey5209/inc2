@@ -13,7 +13,7 @@
     "different_img_per_data" : false,
     "viewDataType": "firebase",
     "viewData" : [
-      {"lokal":"Aguilar",            "duration":"30:0",  "link":"", "image":"22.jpg",        "views": 2                     },
+      {"lokal":"Aguilar",            "duration":"30:0",   "link":"", "image":"22.jpg",       "views": 2                  },
       {"lokal":"Alitaya",            "duration":"30:0",  "link":"", "image":"22.jpg",        "views": 3                },
       {"lokal":"Angio",              "duration":"30:0",  "link":"", "image":"22.jpg",        "views": 2                },
       {"lokal":"Away",               "duration":"30:0",  "link":"", "image":"22.jpg",        "views": 0                },

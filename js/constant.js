@@ -8,8 +8,11 @@ export const firebaseConfig = {
   appId: "1:726733968843:web:d68da6c09a4a1aac7fd24e",
 };
 
-export const arr =[
-    
+export const BASE_PATH = '';
+export const EXTERNAL_PATH = 'distrito-'
+export const EXTERNAL_PATH_ENDPOINT = 'LINGAYEN_PANGASINAN'
+
+export const arr =[ 
     "AGUILAR",
     "ALITAYA",
     "ANGIO",
@@ -70,3 +73,20 @@ export const arr =[
     "TALIBAEW EXT",
     "TULONG"
         ] ;
+
+        
+export const arr_external = [
+  "LINGAYEN PANGASINAN",
+  "ALAMINOS CITY PANGASINAN",
+  "URDANETA CITY PANGASINAN",
+  "SAN CARLOS CITY PANGASINAN",
+  "ROSALES PANGASINAN",
+  "LA UNION",
+  "ILOCOS SUR",
+  "BATAC CITY ILOCOS NORTES",
+  "LAOAG CITY ILOCOS NORTE",
+  "BENGUET",
+  "MOUNTAIN PROVINCE",
+  "ABRA",
+  "CANDON CITY ILOCOS SUR"
+];

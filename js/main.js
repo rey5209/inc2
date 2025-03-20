@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
-import { arr, firebaseConfig } from "./constant.js";
+import { arr, firebaseConfig, BASE_PATH } from "./constant.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -74,7 +74,7 @@ $(document).ready(function () {
 
 
   var unique = + new Date();
-  // console.log(unique);
+  // //console.log(unique);
   var top = true;
   var number_tops = 0;
 
@@ -93,7 +93,7 @@ $(document).ready(function () {
         })
         .then(function (data) {
           var count_page = 1;
-          // console.log(data.today);
+          // //console.log(data.today);
 
           data.jsonData.forEach(setTables);
           // data.yesterday.forEach(setViewsYesteday); 
@@ -115,7 +115,7 @@ $(document).ready(function () {
             // var tittle = item.tittle;
             $('.append_pages').append(
               `
-        <table name="${item.tittle}" class="table table-striped table-hover table-paging table-page-${count_page}" id="maintable${count_page}"> 
+        <table name="${item.tittle}" class="table table-light table-striped table-hover table-paging table-page-${count_page}" id="maintable${count_page}"> 
             <thead>
               <tr > 
                 <th  class="lokals-item d-flex justify-content-between align-items-center"> 
@@ -150,7 +150,7 @@ $(document).ready(function () {
             // }
 
             if (item?.viewDataType === 'firebase') {
-              GetAllDataRealtime("tbody" + count_page, "maintable" + count_page, { redirectPage: redirectPage, count_page: count_page, page: page }, "viewTotal", true);
+              GetAllDataRealtime("tbody" + count_page, "maintable" + count_page, { redirectPage: redirectPage, count_page: count_page, page: page }, BASE_PATH+"viewTotal", true);
 
             } else {
               const appendedLokals = item.viewData.map((item, index) => {
@@ -199,7 +199,7 @@ $(document).ready(function () {
             if (top) {
 
               $('.append_tops').append(`
-            <table   class="table table-striped table-hover top_pages_table top_pages-tables-${count_page}"  id="totaltable${count_page}">
+            <table   class="table table-striped table-light table-hover top_pages_table top_pages-tables-${count_page}"  id="totaltable${count_page}">
                 <thead>
                   <tr > 
                     <th  class="lokals-item d-flex justify-content-between align-items-center"> 
@@ -215,7 +215,7 @@ $(document).ready(function () {
 
 
               if (item?.viewDataType === 'firebase') {
-                GetAllDataRealtime("tbodyTable" + count_page, "totaltable" + count_page, { redirectPage: false, count_page: count_page, page: '#' }, "viewTotal", false);
+                GetAllDataRealtime("tbodyTable" + count_page, "totaltable" + count_page, { redirectPage: false, count_page: count_page, page: '#' }, BASE_PATH+"viewTotal", false);
 
               } else {
 
@@ -256,17 +256,17 @@ $(document).ready(function () {
           updatePaging(current_page, max_page, page_main_tittles, page_sub_tittles)
 
         }).catch(function (error) {
-          console.log(error);
+          ////console.log(error);
         });
 
 
 
     }).catch(function (error) {
-      console.log(error);
+      ////console.log(error);
     });
 
   function updatePaging(current_page, max_page, page_main_tittles, page_sub_tittles) {
-    console.log(page_sub_tittles[0])
+    ////console.log(page_sub_tittles[0])
     $('.table-paging').hide()
     $('.top_pages_table').hide()
 
@@ -335,7 +335,7 @@ $(document).ready(function () {
     if (dataSelect?.length > 0) {
 
     } else {
-      console.log(arr, 'wala laman!')
+      //console.log(arr, 'wala laman!')
       arr.forEach((item) => {
         AddItemToTable(item, 0, id, metaData);
       })
@@ -356,7 +356,7 @@ $(document).ready(function () {
 
   function GetAllDataOnce(id, date, table) {
     // const que = query( ref (db, "TheStdents"), orderByChild("Section"),startAt("B"));
-    const que = query(ref(db, "ViewsCount/" + date));
+    const que = query(ref(db, BASE_PATH+"ViewsCount/" + date));
     get(que).then((snapshot) => {
       var students = [];
 
@@ -382,7 +382,7 @@ $(document).ready(function () {
       });
 
 
-      console.log(responseData, id, table)
+      //console.log(responseData, id, table)
       if (isRegular) {
 
         const customFunction = (meta) => {
@@ -424,7 +424,7 @@ $(document).ready(function () {
         });
 
         arrTops = arrTops.slice(0, number_tops);
-        console.log(arrTops)
+        //console.log(arrTops)
 
         AddAllItemsToTable(arrTops, id, table, metaData, customFunction);
       }
@@ -440,7 +440,7 @@ $(document).ready(function () {
     var result = arrNonValidPath.filter(x => arrVal.includes(x.replace));
     if (result.length > 0) {
 
-      // console.log(result); 
+      // //console.log(result); 
       result.forEach((x) => {
         arrVal = fixPathArgs(x, arrVal);
       })
@@ -455,7 +455,7 @@ $(document).ready(function () {
   function fixPathArgs(arrResult, word) {
 
     let replace = arrResult.replace;
-    // console.log(arrResult)
+    // //console.log(arrResult)
     const regex = new RegExp(`${replace}`, "g");
     word = word.replace(regex, arrResult.type);
 
