@@ -187,7 +187,7 @@ $(document).ready(function () {
       SelectData(); // post - firebase 
       // updateLocalView()
       $('.load-end').html(`
-        "Views have been updated with our powerful Azure OpenAI models."<br><br>
+        "Please contact your KDO Officer if you encounter an error"<br><br>
         "Refresh the page to rewatch."
     `);
       $.LoadingOverlay("hide", true); //remmove the loading overlay
