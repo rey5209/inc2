@@ -13,6 +13,7 @@ $(document).ready(function() {
   var lokal_page_id = urlParams.pageId[0] 
   var lokal_media_id = urlParams.mediaId[0] 
   var link = '';
+  var embed_video = false;
 
   console.log(lokal_name)
   console.log(lokal_page_id)
@@ -28,15 +29,16 @@ $(document).ready(function() {
       return response.json();
     })
     .then(function(data) { 
+
+      // (data.allow_popup_option? data. )
       
-      // Local place valiation
+      different_link = data.jsonData[lokal_page_id-1].different_link_per_data;
+      different_img = data.jsonData[lokal_page_id-1].different_img_per_data;
       var gtag = ( data.jsonData[lokal_page_id-1].allow_popup_option ? data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].gtag_id : data.jsonData[lokal_page_id-1].single_gtag_id   );
 
       var arrLocalData = data.jsonData[lokal_page_id-1].viewData
       var localTitleValidation = localValiation(lokal_name)
 
-
-      
       // var gtag ="https://www.googletagmanager.com/gtag/js?id=G-0BQ9DP4YT3"
       // console.log(localTitleValidation)
 
@@ -55,12 +57,6 @@ $(document).ready(function() {
 
       // End of validation
 
-      // (data.allow_popup_option? data. )
-      
-      different_link = data.jsonData[lokal_page_id-1].different_link_per_data;
-      different_img = data.jsonData[lokal_page_id-1].different_img_per_data;
-      $redirect_txt = ( data.jsonData[lokal_page_id-1].allow_popup_option ? data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].redirect_text : data.jsonData[lokal_page_id-1].redirect_text   );
-
       // console.log($redirect_txt )
       // mmedia id differnt : redirect_text , link
 
@@ -68,17 +64,34 @@ $(document).ready(function() {
 
       // SET LINK from json
       
+      // NOT A DIFFERENT LINK PER LOCALS
       if(!different_link){ 
+
 
         if(data.jsonData[lokal_page_id-1].allow_popup_option){ //if allow popup option, else back to default
 
+          embed_video = data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].embed_link;
           link = data.jsonData[lokal_page_id-1].popup_option[lokal_media_id-1].link;
-          $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+link+'" target="_blank"></a>'); 
+
+          if(embed_video){ 
+            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="#"  ></a>');  
+            $('.modal iframe').attr('src','https://www.youtube.com/embed/'+link+'?rel=0');   
+          }
+          else
+            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+link+'" target="_blank"></a>'); 
         }else{ 
+          embed_video = data.jsonData[lokal_page_id-1].embed_link;
           link = data.jsonData[lokal_page_id-1].link;
-          $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+link+'" target="_blank"></a>'); 
+          if(embed_video){ 
+            $('.modal iframe').attr('src','https://www.youtube.com/embed/'+link+'?rel=0');   
+            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="#"  ></a>'); 
+          }
+          else
+            $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+link+'" target="_blank"></a>'); 
         }
       } 
+
+      console.log(embed_video)
 
       if(!different_img){ 
         var image = data.jsonData[lokal_page_id-1].image;
@@ -92,11 +105,13 @@ $(document).ready(function() {
 
       function setViews(item, index) {  
         if(lokal_name == item.lokal){ 
-          $('.lokal_view').text(item.views).text(Math.round(item.views))
+          $('.lokal_view').text(item.views) 
           $('.lokal_name').text(item.lokal) 
           array_duration = item.duration.split(":");
-          if(different_link)
+          if(different_link){ 
             $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="'+item.link+'" target="_blank"></a>'); 
+            // $('.main-event').append('<a  id="hidden-link" class="hidden-link" href="#" target="_blank"></a>'); 
+          }
           if(different_img)
             $(".append-image").append(''+  '<img class="img-fluid mx-auto d-block shadow-lg p-3 mb-5 bg-body rounded"src="img/'+item.image+'" alt=""></img>'+ '')
         }
@@ -136,18 +151,32 @@ $('.post-btn').click(function() {
   sec = sec*1000;
  
 
-   loadingFunction(sec);
     
      // window.open("https://youtu.be/vkIqKiLgm6Y", "_blank"); 
-    $('.main-event').hide(); 
-    $('.instruction-note').show(); 
+
+
+    //  show loading function and add notes
+
     
-     $( "#hidden-link" ).trigger( "click" );
+   loadingFunction(sec,embed_video);
+
+
+    if(embed_video){
+      $('#staticBackdrop').modal('show');
+
+      $('.main-event').hide(); 
+    }else{ 
+      $('.main-event').hide(); 
+      $('.instruction-note').show(); 
+    }
+    
+    
+    //  $( "#hidden-link" ).trigger( "click" );
      document.getElementById('hidden-link').click();
 
     setInterval(function()
     {   
-        $('.load-end').text("Your views will be monitored and will update later..")
+        $('.load-end').text("Don't forget to like and subscribe")
         $.LoadingOverlay("hide", true); //remmove the loading overlay
         $('.instruction-note').hide();
         $('.thanks-note').show();
@@ -161,6 +190,8 @@ $('.post-btn').click(function() {
         // 5 minutes = 300000
         // 10 min = 600000
   });
+
+
   function parseURLParams(url) {
     var queryStart = url.indexOf("?") + 1,
         queryEnd   = url.indexOf("#") + 1 || url.length + 1,
@@ -180,6 +211,7 @@ $('.post-btn').click(function() {
     }
     return parms;
 }
+
 function updateWaitingText(mins,secs){
   var str_timer = "";
 
@@ -194,21 +226,26 @@ function updateWaitingText(mins,secs){
     // 
 }
 
-  function loadingFunction(sec){ 
+  function loadingFunction(sec,embed_video){
 //  Sending view from Youtube "Uploading data from Google Firebase ""DONE ! Please wait your view to be update by Team " 
  
    
 
     var customElement =  '<div class="cm-spinner"></div>'
+
+
+    if(!embed_video){
+
+        $.LoadingOverlay("show", {
+          background: "rgb(203, 225, 245, 0.3)", 
+          image: "",
+          custom           : customElement,
+          customAnimation  : "",
+          customAutoResize : true,
+          customResizeFactor: 2 
+      }); 
+    }
     
-    $.LoadingOverlay("show", {
-        background: "rgb(203, 225, 245, 0.3)", 
-        image: "",
-        custom           : customElement,
-        customAnimation  : "",
-        customAutoResize : true,
-        customResizeFactor: 2 
-    }); 
     //  $('.load-start').text('Sending view')
       // $('.lokal_view').text(data.jsonData[lokal_page_id-1].redirect_text)
     
@@ -240,6 +277,13 @@ function updateWaitingText(mins,secs){
         // 5 minutes = 300000
         // 10 min = 600000  
   }
+
+  var myModalEl = document.getElementById('staticBackdrop')
+  myModalEl.addEventListener('hidden.bs.modal', function (event) {
+    
+    $('.main-event').show(); 
+
+  })
   
   
     
