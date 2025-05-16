@@ -1,10 +1,10 @@
 {
   "jsonData" : [
     {
-    "tittle" : "Flavors of the North ┃ Lingayen Pangasinan ┃ April 19, 2025 ",
+    "tittle" : "Flavors of the North ┃ Lingayen Pangasinan ┃ May 17, 2025 ",
     "subTittle" : "Facebook",
     "image" : "22.jpg",
-    "link" : "https://www.youtube.com/live/CA3H_T23itM?si=RgJg3LHVYUfDtiTE&t=1",
+    "link" : "https://www.youtube.com/live/IyLZKwS5fuI?si=zGbXPu74jpABfZC9",
     "allowEdit": false,
     "redirectPage": true,
     "page" : "watch",
@@ -13,7 +13,7 @@
     "different_img_per_data" : false,
     "viewDataType": "firebase",
     "viewData" : [
-      {"lokal":"Aguilar",            "duration":"30:0",   "link":"", "image":"22.jpg",       "views": 2                  },
+      {"lokal":"Aguilar",            "duration":"30:0",  "link":"", "image":"22.jpg",       "views": 2                  },
       {"lokal":"Alitaya",            "duration":"30:0",  "link":"", "image":"22.jpg",        "views": 3                },
       {"lokal":"Angio",              "duration":"30:0",  "link":"", "image":"22.jpg",        "views": 2                },
       {"lokal":"Away",               "duration":"30:0",  "link":"", "image":"22.jpg",        "views": 0                },
