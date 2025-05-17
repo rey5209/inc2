@@ -28,6 +28,7 @@ var counter = {"ajax_url":"rey5209.github.io"};
 
 <!-- THEME -->
 <link href="css/main.css" rel="stylesheet"  >
+<link href="css/loader.css" rel="stylesheet"  >
 <style>
   a:link { text-decoration: none;  
   }
@@ -64,6 +65,15 @@ var counter = {"ajax_url":"rey5209.github.io"};
 
     
 <body class="home page-template-default page page-id-10 pt-5">
+
+  <!-- Loader overlay -->
+<div id="loader-overlay">
+  <div class="loader modal-loader border-brand-default dark:border-darkmodebrand">
+    <svg class="square-svg-spinner" viewBox="0 0 32 32">
+      <rect x="6" y="6" width="20" height="20" rx="4"/>
+    </svg>
+  </div>
+</div>
 
 <header id="site-header" class="site-header  " role="banner"> 
   <div class="container-lg my-md-5  site-branding header-img pb-5">
@@ -142,6 +152,7 @@ var counter = {"ajax_url":"rey5209.github.io"};
   <script src="js/jquery-3.6.0.js" ></script> 
 <script src="js/main.js?ver=1" type="module"></script>
 <script src="js/scroller.js"  ></script>
+<script src="js/loader.js"></script>
 <!-- <script type="text/javascript" src="js/today.json"></script> --> 
 
 </body></html>

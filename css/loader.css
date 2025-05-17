@@ -1,0 +1,61 @@
+#loader-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s;
+}
+#loader-overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.loader.modal-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 4px solid transparent;
+  border-radius: 16px;
+  background: transparent;
+  box-shadow: none;
+  position: relative;
+}
+.border-brand-default {
+  border-color: transparent !important;
+}
+.dark\:border-darkmodebrand {
+  border-color: transparent !important;
+}
+.square-svg-spinner {
+  width: 32px;
+  height: 32px;
+  display: block;
+  animation: square-svg-spin 1s linear infinite;
+}
+@keyframes square-svg-spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+/* Color animation for the square */
+.square-svg-spinner rect {
+  stroke: #007bff;
+  stroke-width: 4;
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 64;
+  stroke-dashoffset: 0;
+  animation: square-svg-color 1.2s linear infinite;
+}
+@keyframes square-svg-color {
+  0% { stroke: #007bff; }
+  25% { stroke: #00c3ff; }
+  50% { stroke: #00ffae; }
+  75% { stroke: #ffe066; }
+  100% { stroke: #007bff; }
+}
