@@ -45,6 +45,7 @@ export const arr =[
     "LAGUIT CENTRO",
     "LEET",
     "LINGAYEN",
+    "LIBSONG EAST EXT",
     "LOBONG",
     "LONGOS CALASIAO EXT",
     "LONGOS SAN FABIAN EXT",
