@@ -189,7 +189,7 @@ $(document).ready(function () {
       SelectData(); // post - firebase 
       // updateLocalView()
       $('.load-end').html(`
-        "Please contact your KDO Officer if you encounter an error"<br><br>
+        "Please contact your District Multimedia <b>Ka-Rommel</b>. if you encounter an error"<br><br>
         "Refresh the page to rewatch."
     `);
       $.LoadingOverlay("hide", true); //remmove the loading overlay
