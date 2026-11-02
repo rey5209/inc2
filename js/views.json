@@ -1,14 +1,14 @@
 {
   "jsonData" : [
     {
-    "tittle" : "CFO Bookmobile ┃ Lingayen Pangasinan ┃ August 22, 2026 ",
-    "subTittle" : "Facebook",
-    "image" : "22.jpg",
-    "link" : "https://www.facebook.com/share/v/1DKmuy5R4X/",
+    "tittle" : "INCINEMA 2026 | Sa Likod ng Screen | Ecclesiastical District of Lingayen, Pangasinan ",
+    "subTittle" : "Youtube",
+    "image" : "b3b13036-5c8f-4bdd-b13d-4a2edf563980.jpg",
+    "link" : "https://www.youtube.com/watch?v=ySf1FwpTWmI/",
     "allowEdit": false,
     "redirectPage": true,
     "page" : "watch",
-    "redirect_text":"Sending View From Facebook",
+    "redirect_text":"Sending View From Youtube",
     "different_link_per_data" : false,
     "different_img_per_data" : false,
     "viewDataType": "firebase",
